@@ -1,8 +1,15 @@
-import { ApiV3PoolInfoStandardItemCpmm, CpmmKeys, CpmmRpcData, CurveCalculator } from '@raydium-io/raydium-sdk-v2'
-import { initSdk } from '../config'
 import BN from 'bn.js'
-import { isValidCpmm } from './utils'
+
+import {
+  ApiV3PoolInfoStandardItemCpmm,
+  CpmmKeys,
+  CpmmRpcData,
+  CurveCalculator,
+} from '@raydium-io/raydium-sdk-v2'
 import { NATIVE_MINT } from '@solana/spl-token'
+
+import { initSdk } from '../config'
+import { isValidCpmm } from './utils'
 
 export const swap = async () => {
   const raydium = await initSdk()
@@ -69,4 +76,4 @@ export const swap = async () => {
 }
 
 /** uncomment code below to execute */
-// swap()
+swap()
